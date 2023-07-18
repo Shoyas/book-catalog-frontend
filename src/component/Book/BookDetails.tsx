@@ -6,7 +6,6 @@
 import Navigation from "../Home/Navigation";
 import {
   useDeleteBookMutation,
-  useGetCommentQuery,
   usePostCommentMutation,
   useSingleBookQuery,
 } from "../../redux/api/apiSlice";

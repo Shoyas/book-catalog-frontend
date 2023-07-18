@@ -8,6 +8,8 @@ import Card from "./Card";
 
 const Body = () => {
   const { data, isLoading, error } = useGetBooksQuery(undefined);
+  console.log(isLoading)
+  console.log(error)
   
 
   return (

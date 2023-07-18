@@ -14,6 +14,8 @@ const Navigation = () => {
     const [logoutUser] = useLogoutUserMutation();
     const { data, isLoading, error } = useGetAllUsersQuery(undefined);
     console.log("Get all user data after sign in: ", data);
+    console.log(isLoading)
+    console.log(error)
 
   const handleLogout = async () => {
     try {

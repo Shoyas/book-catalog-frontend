@@ -24,7 +24,9 @@ export type ILoginUserResponse = {
 
 export const api = createApi({
   reducerPath: "bookApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:5000/api/v1" }),
+  baseQuery: fetchBaseQuery({
+    baseUrl: "https://assignment-5-book-catalog-backend.onrender.com/api/v1",
+  }),
   tagTypes: ["comments", "PostBook"],
   endpoints: (builder) => ({
     getBooks: builder.query({
@@ -71,7 +73,7 @@ export const api = createApi({
           method: "DELETE",
         };
       },
-      invalidatesTags: (result, error, id) => [{ type: "PostBook", id }],
+      // invalidatesTags: (id) => [{ type: "PostBook", id }],
     }),
 
     postSignUp: builder.mutation<IUser, Partial<IUser>>({

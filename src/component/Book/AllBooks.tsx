@@ -22,6 +22,8 @@ interface IFormInput {
 
 const AllBooks = () => {
   const { data, isLoading, error } = useGetBooksQuery(undefined);
+  console.log(isLoading);
+  console.log(error);
 
   const { genre, publication_date, searchTerm } = useAppSelector(
     (state) => state.filterBooks
